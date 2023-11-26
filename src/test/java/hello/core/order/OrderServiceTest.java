@@ -31,4 +31,6 @@ class OrderServiceTest {
         org.assertj.core.api.Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
     }
 
+
+
 }

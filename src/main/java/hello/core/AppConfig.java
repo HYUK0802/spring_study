@@ -15,6 +15,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
+    // @Bean memberService -> new MemoryMemberRepository()
+    // @Bean orderService -> new MemoryMemberRepository()
+
     @Bean
     public MemberService memberService() {
         return new MemberServiceImpl(new MemoryMemberRepository());
@@ -25,7 +28,8 @@ public class AppConfig {
     }
     @Bean
     public OrderService orderService() {
-        return new OrderServiceImpl(new MemoryMemberRepository(), new FixDiscountPolicy());
+//        return new OrderServiceImpl(new MemoryMemberRepository(), new FixDiscountPolicy());
+        return null;
     }
     @Bean
     public DiscountPolicy discountPolicy() {
